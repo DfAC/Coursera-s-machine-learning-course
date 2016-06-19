@@ -1,6 +1,4 @@
 # Machine learning by Andrew Ng
-
-
 # Week01
 
 
@@ -46,8 +44,17 @@ We are relaying on algorithm to learn how the data works
 * To train we are defining our cost function. Example here is LSA - called here squared error function.
 	* for linear model we would use $\tau (\theta_0 , \theta_1)= \frac{1}{n}\textstyle \sum_{i=1}^{m}(h_0(x^i)-y^i)^2$
 	* it is also called sq error function, so it is L2 function
-* hypothesis is funciton of x, cost function is function of parameter $\theta_i$
-	* while hypothesis is linear, cost fuction wil be $x^2$, so we will look for minimum function to solve for it
-* To find minimum we look at direction for steepest descent, we are using $\alpha$ to define how quick we learn. With multiple values make sure you do simultaneous update!
+* hypothesis is function of x, cost function is function of parameter $\theta_i$
+	* while the hypothesis function is linear, the cost function is always a [convex function](https://en.wikipedia.org/wiki/Convex_function), so we will look for minimum function to solve for it
+	* with two parameters this is bow-shape function.
+* To mineralise cost function, or to find minimum
+	* we look at direction for steepest descent
+	* we will repeat $\theta_j := \theta_j - \alpha \frac{\partial J( \theta_0, \theta_1) }{\partial \theta_j}$ until convergence
+	* we are using $\alpha$ to define how quick we learn - we have to balance between speed and overshooting minimum
+	* we can end up with local minimum, and then our cost function will get stuck as $\alpha \frac{\partial J( \theta_0, \theta_1) }{\partial \theta_j}=0$
+	* for the specific choice of cost function, used in linear regression, there are no local optima other than the global optimum
+	* as we approach minimum, our derivative get smaller so we can keep $\alpha$ constant
+	* With multiple values make sure you do **simultaneous update** all variables - always use last epoch values, that is \theta_0^2, \theta_1^2 := f(\theta_0^0, \theta_1^0)
+	* batch gradient descent - on each step we use of all training examples, is the most basic approach
 
-Cost function is always convex function!
+
