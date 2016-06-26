@@ -1,7 +1,9 @@
-# Coursera's machine learning course (in Python)
-Exercises for [Coursera's machine learning course](https://www.coursera.org/learn/machine-learning/), completed in Python 
+# Coursera's machine learning course
 
-####Completed so far/in development:
-Exercise 1 (week 2): [Linear regression](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex1.ipynb)
+THis is my code for the [Coursera's machine learning course](https://www.coursera.org/learn/machine-learning/), following official code in Matlab and then completed in Python.
+To kick off my python code I have forked [Lyn's one](https://github.com/linbug/Coursera-s-machine-learning-course)
 
-Exercise 2 (week 3): [Logistic regression](http://nbviewer.ipython.org/github/linbug/Coursera-s-machine-learning-course/blob/master/ml%20ex2.ipynb)
+
+[ x ] Exercise 1 (week 2)
+[  ] Exercise 2 (week 3): still only Lyn's code
+[  ]  Exercise 2
