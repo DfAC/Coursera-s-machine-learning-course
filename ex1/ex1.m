@@ -24,16 +24,35 @@
 %
 
 %% Initialization
-clear ; close all; clc
+tic;
+clc;clear all;
+close(findall(0,'Type','figure')); 
+%close all
+
+%% debug and profiling tools
+% profile on;
+% profile clear;
+%dbclear all %remove all breakpoints
+dbstop if error
+%dbstop at 97
+% dbstop if naninf
+% dbstop in DatasetCorrOffset2D at 17 if idx==7
+
+%s=dbstatus('-completenames');
+%save myfilebrkpnts s
+
+display('DEBUG MODE');
+dbstatus
+
 
 %% ==================== Part 1: Basic Function ====================
 % Complete warmUpExercise.m 
-fprintf('Running warmUpExercise ... \n');
-fprintf('5x5 Identity Matrix: \n');
-warmUpExercise()
+%fprintf('Running warmUpExercise ... \n');
+%fprintf('5x5 Identity Matrix: \n');
+%warmUpExercise()
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 
 %% ======================= Part 2: Plotting =======================
@@ -46,8 +65,8 @@ m = length(y); % number of training examples
 % Note: You have to complete the code in plotData.m
 plotData(X, y);
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 %% =================== Part 3: Gradient descent ===================
 fprintf('Running Gradient Descent ...\n')
@@ -55,7 +74,7 @@ fprintf('Running Gradient Descent ...\n')
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
 
-% Some gradient descent settings
+% initialise gradient descent settings
 iterations = 1500;
 alpha = 0.01;
 
@@ -120,3 +139,7 @@ contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))
 xlabel('\theta_0'); ylabel('\theta_1');
 hold on;
 plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+
+
+%%
+toc;
