@@ -13,11 +13,11 @@ for iter = 1:num_iters
   v = X*theta-y;
   delta = (v'*X)/m;
   %update value with prediction
-   theta = theta -alpha.*delta';
+   theta = theta -alpha.*delta'; %update all values in the same time
    % Save the cost J in every iteration    
    J_history(iter) = computeCost(X, y, theta);
 
 end
-
+a=1;
 
 end
