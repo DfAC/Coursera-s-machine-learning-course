@@ -6,9 +6,6 @@ function [X_norm, mu, sigma] = featureNormalize(X)
 %   working with learning algorithms.
 
 % You need to set these values correctly
-X_norm = X;
-mu = zeros(1, size(X, 2));
-sigma = zeros(1, size(X, 2));
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: First, for each feature dimension, compute the mean
@@ -22,12 +19,12 @@ sigma = zeros(1, size(X, 2));
 %               feature and each row is an example. You need 
 %               to perform the normalization separately for 
 %               each feature. 
-%
-% Hint: You might find the 'mean' and 'std' functions useful.
-%       
 
+mu = mean(X);%zeros(1, size(X, 2));
+X_norm = bsxfun(@minus,X,mu); %remove feature mean
 
-
+sigma = std(X);
+X_norm = bsxfun(@rdivide,X_norm,sigma);
 
 
 

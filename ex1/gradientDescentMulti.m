@@ -18,6 +18,13 @@ for iter = 1:num_iters
     %
 
 
+  % cost J(?) is parameterized by the vector ?, not X and y
+  v = X*theta-y;
+  delta = (v'*X)/m;
+  %update value with prediction
+   theta = theta -alpha.*delta';
+   % Save the cost J in every iteration    
+   J_history(iter) = computeCost(X, y, theta);
 
 
 

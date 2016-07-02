@@ -24,12 +24,31 @@
 %  learning rates).
 %
 
+
+
+
 %% Initialization
+%tic;
+clc;clear all;
+close(findall(0,'Type','figure')); 
+%close all
+
+%% debug and profiling tools
+% profile on;
+% profile clear;
+dbclear all %remove all breakpoints
+dbstop if error
+%dbstop at 97
+% dbstop if naninf
+%dbstop in normalEqn at 15% if idx==7
+
+%s=dbstatus('-completenames');
+%save myfilebrkpnts s
+
+display('DEBUG MODE');
+dbstatus
 
 %% ================ Part 1: Feature Normalization ================
-
-%% Clear and Close Figures
-clear ; close all; clc
 
 fprintf('Loading data ...\n');
 
