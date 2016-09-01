@@ -18,4 +18,7 @@ To kick off my python code I have forked [Lyn's one](https://github.com/linbug/C
 I also recommend checking out the following:
 
 * <https://github.com/JWarmenhoven/Coursera-Machine-Learning>
-* [Machine Learning unofficial notes](http://www.holehouse.org/mlclass/)
+* [Unofficial Andrew Ng course notes](http://www.holehouse.org/mlclass/)
+* [Tom Mitchell Machine Learning Lectures](http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml)
+* <http://www.scipy-lectures.org/>
+* <http://www.kdnuggets.com/2015/11/seven-steps-machine-learning-python.html/>
