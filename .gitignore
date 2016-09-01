@@ -20,7 +20,7 @@ $RECYCLE.BIN/
 # ipython files
 
 .ipynb_checkpoints/
-.idea/
+.idea/	
 
 
 

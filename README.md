@@ -4,9 +4,9 @@ THis is my code for the [Coursera's machine learning course](https://www.courser
 To kick off my python code I have forked [Lyn's one](https://github.com/linbug/Coursera-s-machine-learning-course)
 
 
-[ x ] Exercise 1 (week 2)
-[  ] Exercise 2 (week 3): still only Lyn's code
-[  ]  Exercise 3
+[x] Exercise 1 (week 2)
+[ ] Exercise 2 (week 3): still only Lyn's code
+[ ]  Exercise 3
 
 ## notes
 
@@ -15,6 +15,7 @@ To kick off my python code I have forked [Lyn's one](https://github.com/linbug/C
 
 ## additional support
 
-I also used code from those repos:
+I also recommend checking out the following:
 
 * <https://github.com/JWarmenhoven/Coursera-Machine-Learning>
+* [Machine Learning unofficial notes](http://www.holehouse.org/mlclass/)
